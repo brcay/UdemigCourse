@@ -1,0 +1,77 @@
+// Scss Dosya Bağlantıları
+@import "variables";
+@import "header";
+@import "main";
+@import "educations";
+@import "about";
+@import "popular";
+@import "contactUs";
+@import "footer";
+
+
+// Ortak Yapıların Sıfırlanması
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: $textColor;
+    background-color: $bgColor;
+    font-family: "Open Sans", sans-serif;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 40px;
+    background-color: $mainColor;
+    color: $bgColor;
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 5px;
+
+        &:hover {
+            transform: translateX(10px);
+            border: 2px solid $textColor;
+            background-color: transparent;
+            color: $textColor;
+        }
+}
+
+// Responsive
+@media (max-width: 1220px) {
+    .navbar li {
+      display: none;
+    }
+    .home {
+      .home-text {
+        h5 {
+          font-size: 16px;
+        }
+        h1 {
+          font-size: 38px;
+        }
+        p {
+          font-size: 16px;
+        }
+        .btn {
+          padding: 8px 15px;
+          font-size: 16px;
+          transition: all 0.5s;
+        }
+      }
+    }
+  
+    .about-us {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
